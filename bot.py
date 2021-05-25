@@ -6,13 +6,13 @@ import discord
 token = open("token.txt").readlines()[0].replace("\n", "")
 guild = open("guild.txt").readlines()[0].replace("\n", "")
 
-# Other shit
-client = discord.Client()
+# Idk copy pasted this
 
+class CustomClient(discord.Client):
+    async def on_ready(self):
+        print(f'{self.user} has connected to Discord!')
 
-@client.event
-async def on_ready():
-    print(f'{client.user} has connected to Discord!')
+client = CustomClient()
 
 
 client.run(token)
