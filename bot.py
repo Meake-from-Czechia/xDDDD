@@ -8,7 +8,8 @@ guild = open("guild.txt").readlines()[0].replace("\n", "")
 
 # Idk copy pasted this
 
-client = discord.Client()
+intents = discord.Intents.default()
+client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
