@@ -18,9 +18,6 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.author == client.user:
-        return
-    else:
         response = ("x" + "D" * random.randint(20, 35))
         await message.channel.send(response)
 
